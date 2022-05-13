@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.befde0ce.css",
+    "main.js": "/static/js/main.e14d1cd2.js",
+    "static/js/787.a5398185.chunk.js": "/static/js/787.a5398185.chunk.js",
+    "static/media/Bg.svg": "/static/media/Bg.a600f03a6b26a928e066.svg",
+    "static/media/Earh.svg": "/static/media/Earh.97e37a7bec26ac5bfa65ba36b67a1714.svg",
+    "static/media/Venera.svg": "/static/media/Venera.cb2b405e3d718bd2cd84200e3bb55c34.svg",
+    "static/media/Merkury.svg": "/static/media/Merkury.2cbf6e362a69b46bb65992ba0c4f8538.svg",
+    "static/media/Planet.svg": "/static/media/Planet.4de7510124d2a07bfa7bd8d938b622ac.svg",
+    "static/media/Uran.svg": "/static/media/Uran.507f54ac1d3047c0aa6d7d37e667a3e7.svg",
+    "static/media/RocketCancel.svg": "/static/media/RocketCancel.826f16bc758ccda2a5912760bff8f4f5.svg",
+    "static/media/Rocket.svg": "/static/media/Rocket.ae016c414bd5c870431318a67da4efed.svg",
+    "static/media/Planet (logo).svg": "/static/media/Planet (logo).f062e09437ed357b73fd.svg",
+    "static/media/planet-container.svg": "/static/media/planet-container.f14e130e4cc2804f5f1c.svg",
+    "index.html": "/index.html",
+    "static/media/Icon.svg": "/static/media/Icon.a12c1a2434e627851c3d.svg",
+    "static/media/menu.svg": "/static/media/menu.8534d488ecd30eff474c.svg",
+    "main.befde0ce.css.map": "/static/css/main.befde0ce.css.map",
+    "main.e14d1cd2.js.map": "/static/js/main.e14d1cd2.js.map",
+    "787.a5398185.chunk.js.map": "/static/js/787.a5398185.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.befde0ce.css",
+    "static/js/main.e14d1cd2.js"
+  ]
+}

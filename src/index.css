@@ -1,0 +1,17 @@
+body {
+
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: Roboto;
+  background-image: url('./Assets/images/Bg.svg');
+  background-size: cover;
+  /* min-width: 340px; */
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

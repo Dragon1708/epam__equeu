@@ -1,0 +1,62 @@
+@import "../../variable";
+
+.AdminPanel{
+    display:flex;
+    margin-top:72px;
+&__list{
+  margin-left:80px;
+
+}
+&__statistic{
+position:absolute;
+right:0;
+margin-right: 80px;
+&-wrapper{
+
+  background: #FFFFFF;
+box-shadow: 0px 2px 15px rgba(38, 27, 27, 0.15);
+border-radius: 20px;
+}
+&-table{
+  padding:32px;
+  & td{
+
+    & span{
+margin-left: 8px;
+    }
+  }
+}
+
+}
+}
+.statistic{
+&__waiting{
+color:#7F8FA6;
+}
+&__applyed{
+  color: $green-color;
+}
+&__cancel{
+  color: $red-color;
+}
+}
+scroll-container {
+    display: block;
+    margin-left:80px;
+max-height: 680px;
+padding-right: 10px;
+overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1100px) {
+.AdminPanel{
+  &__list{
+    margin-left:20px;
+  
+  }
+&__statistic{
+  display: none;
+}
+}
+}

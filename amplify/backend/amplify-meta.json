@@ -1,0 +1,76 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-queueepam-dev-190600-authRole",
+      "UnauthRoleArn": "arn:aws:iam::671473741133:role/amplify-queueepam-dev-190600-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::671473741133:role/amplify-queueepam-dev-190600-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-queueepam-dev-190600-deployment",
+      "UnauthRoleName": "amplify-queueepam-dev-190600-unauthRole",
+      "StackName": "amplify-queueepam-dev-190600",
+      "StackId": "arn:aws:cloudformation:eu-central-1:671473741133:stack/amplify-queueepam-dev-190600/a4c3dcb0-d20d-11ec-8876-0a498d496482",
+      "AmplifyAppId": "d2qtlyxvf2mhl6"
+    }
+  },
+  "function": {
+    "UserHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "Region": "eu-central-1",
+        "Arn": "arn:aws:lambda:eu-central-1:671473741133:function:UserHandler-dev",
+        "Name": "UserHandler-dev",
+        "LambdaExecutionRole": "queueepamLambdaRolee0ef1fa7-dev"
+      },
+      "lastPushTimeStamp": "2022-05-12T18:08:19.375Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-queueepam-dev-190600-deployment/amplify-cfn-templates/function/UserHandler-cloudformation-template.json",
+        "logicalId": "functionUserHandler"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-queueepam-dev-190600-deployment",
+        "s3Key": "amplify-builds/UserHandler-49724b755274342b5a79-build.zip"
+      }
+    }
+  },
+  "api": {
+    "api755dfac9": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "UserHandler",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "ApiName": "api755dfac9",
+        "RootUrl": "https://anibul1fe3.execute-api.eu-central-1.amazonaws.com/dev",
+        "ApiId": "anibul1fe3"
+      },
+      "lastPushTimeStamp": "2022-05-12T18:08:19.378Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-queueepam-dev-190600-deployment/amplify-cfn-templates/api/api755dfac9-cloudformation-template.json",
+        "logicalId": "apiapi755dfac9"
+      }
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "output": {},
+      "lastPushTimeStamp": "2022-05-12T18:08:19.380Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-queueepam-dev-190600-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      }
+    }
+  }
+}

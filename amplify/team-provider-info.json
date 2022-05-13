@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-queueepam-dev-190600-authRole",
+      "UnauthRoleArn": "arn:aws:iam::671473741133:role/amplify-queueepam-dev-190600-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::671473741133:role/amplify-queueepam-dev-190600-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-queueepam-dev-190600-deployment",
+      "UnauthRoleName": "amplify-queueepam-dev-190600-unauthRole",
+      "StackName": "amplify-queueepam-dev-190600",
+      "StackId": "arn:aws:cloudformation:eu-central-1:671473741133:stack/amplify-queueepam-dev-190600/a4c3dcb0-d20d-11ec-8876-0a498d496482",
+      "AmplifyAppId": "d2qtlyxvf2mhl6"
+    },
+    "categories": {
+      "function": {
+        "UserHandler": {
+          "deploymentBucketName": "amplify-queueepam-dev-190600-deployment",
+          "s3Key": "amplify-builds/UserHandler-49724b755274342b5a79-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2qtlyxvf2mhl6",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "../../variable";
+
+.RegisterForm{
+    max-width: 272px;
+    &__wrapper{
+   display: flex;
+    flex-direction: column;
+    padding:48px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 15px rgba(38, 27, 27, 0.15);
+    border-radius: 20px;
+    }
+    &__title{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding-bottom: 32px;
+        min-width: 280px;
+        max-width: 372px;
+        color: #353B48;
+    }
+    &__label{
+display:block;
+padding: 24px 0 8px 0;
+font-size: 16px;
+line-height: 16px;
+
+    }
+    &__input{
+     
+    }
+   
+    &__button{
+margin-top: 40px;
+    }
+}
+
+.admin-auth{
+    margin-top:30px;
+    text-align: center;
+    & a{
+        color: $green-color;
+    }
+}
+
+@media (max-width: 575px) {
+
+.RegisterForm__section{
+    display:block;
+    position: relative;
+  }
+  .RegisterForm__img{
+    margin-top:30%;
+    margin-left:30%;
+    position: absolute;
+  }
+  .RegisterForm__wrapper{
+    margin-top:30px;
+    margin-left:20px;
+    margin-right:20px;
+  }
+  .RegisterForm__input{
+max-width:98%;
+  }
+    }

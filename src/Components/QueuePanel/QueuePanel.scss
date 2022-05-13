@@ -1,0 +1,112 @@
+@import "../../variable";
+
+.QueuePanel{
+margin-top:90px;
+  &__wrapper{
+      margin-left: auto;
+      margin-right: auto;
+      width: 800px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 15px rgba(38, 27, 27, 0.15);
+    border-radius: 20px;
+  }
+   
+    &__title{
+        padding-top: 20px;
+        text-align: center;
+    }
+    &__container{
+        margin-left: 26px;
+        margin-top: 30px;
+    }
+    &__queue-info{
+& span{
+    margin-left:10px;
+    color: $green-color;
+}
+    }
+    &__data-wrapper{
+        margin-top:26px;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 30px;
+    }
+}
+progress{
+    margin-top:8px;
+    height:20px;
+    background: #353B48;
+    display: block;
+  
+    width: 90%;
+    &::-webkit-progress-value {
+        background: $green-color;
+    }
+}
+
+.data-wrapper{
+    &__planet{
+display:grid;
+grid-template-columns:1fr 1fr ;
+
+    }
+    &__title{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    &__img{
+        margin-top: 20px;
+width: 200px;
+    }
+    &__planet-info{
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    &__label{
+        color: #353B48;
+        
+    }
+    &__planet-name{
+        line-height:80%;
+        color: $orange-color;
+    }
+    &__user-info{
+ margin-left:80px;
+        max-width:60%;
+    }
+    &__user-title{
+        margin-bottom: 22px;
+    }
+    &__name{
+  margin-bottom: 22px;
+        border-bottom: 2px solid  $orange-color;
+        padding-bottom: 2px;
+    }
+    &__phone{
+        border-bottom: 2px solid  $orange-color;
+        padding-bottom: 2px;
+    }
+}
+
+@media (max-width: 575px) {
+    .QueuePanel{
+    &__data-wrapper{
+        display:block;
+    }
+    &__wrapper{
+        margin-left: 20px;
+        margin-right: 20px;
+        width: auto;
+    }
+}
+.data-wrapper{
+    &__img{
+width: 150px;
+    }
+    &__user-info{
+        margin-top:40px;
+        margin-left:0;
+        max-width: 90%;
+    }
+}
+}

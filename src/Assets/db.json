@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "Name": "anno",
+      "phone": "+380973449863",
+      "planetID": "4",
+      "status": "canceled"
+    }
+  ],
+  "administrators": [
+    {
+      "id": 1,
+      "name": "Lanas",
+      "phone": "+380434656"
+    }
+  ],
+  "Planets": [
+    {
+      "name": "venus",
+      "PlanetImage": "/static/media/Venera.cb2b405e3d718bd2cd84200e3bb55c34.svg",
+      "id": 1
+    },
+    {
+      "name": "earth",
+      "PlanetImage": "/static/media/Earh.97e37a7bec26ac5bfa65ba36b67a1714.svg",
+      "id": 2
+    },
+    {
+      "name": "mars",
+      "PlanetImage": "/static/media/Venera.cb2b405e3d718bd2cd84200e3bb55c34.svg",
+      "id": 3
+    },
+    {
+      "name": "mercury",
+      "PlanetImage": "/static/media/Merkury.2cbf6e362a69b46bb65992ba0c4f8538.svg",
+      "id": 4
+    },
+    {
+      "name": "neptune",
+      "PlanetImage": "/static/media/Planet.4de7510124d2a07bfa7bd8d938b622ac.svg",
+      "id": 5
+    },
+    {
+      "name": "uranus",
+      "PlanetImage": "/static/media/Uran.507f54ac1d3047c0aa6d7d37e667a3e7.svg",
+      "id": 6
+    }
+  ]
+}

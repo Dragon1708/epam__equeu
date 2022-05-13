@@ -1,0 +1,90 @@
+@import "../../variable";
+
+.header{
+ 
+}
+.nav-bar-wrapper {
+  // max-width: 70%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 80px 0 80px;
+
+}
+
+.nav-logo-wrapper {
+  position: relative;
+  padding-left: 80px;
+}
+
+.nav-title {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2em;
+}
+
+.nav-title::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  border-left: 1px solid $grey-color;
+  width: 10px;
+  height: 26px;
+  right: 85px;
+  top: 5px;
+}
+
+.nav-logo {
+  position: absolute;
+  background-image: url('../../Assets/images/Planet (logo).svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 30px;
+  left: 5px;
+}
+
+.nav-menu-item {
+  font-size: 14px;
+  line-height: 100%;
+  padding-left: 32px;
+}
+
+.nav-menu-item:nth-child(3){
+  padding-right: 36px;
+}
+
+.nav-menu-icon {
+  display: inline-block;
+  background-image: url('../../Assets/icons/Icon.svg');
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+.menu-button{
+  background-image: url('../../Assets/icons/menu.svg');
+  background-position: center;
+  width: 24px;
+  height: 24px;
+display:none;
+}
+@media (max-width: 575px) {
+  .nav-menu-wrapper{
+    display:none;
+  }
+  .menu-button{
+    display: block;
+  }
+  .nav-bar-wrapper {
+ 
+     padding: 30px 20px 0 20px;
+  
+  }
+}
+/* ----- X-Large devices (large desktops, 1200px and up) ----- */
+
+// @media (min-width: 1200px) and (max-width: 1500px) {
+
+// }
+

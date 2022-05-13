@@ -1,0 +1,38 @@
+.QueueResultPanel{
+
+&__container{
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+background: #FFFFFF;
+box-shadow: -12px 11px 16px rgba(255, 255, 255, 0.25), 11px 13px 16px rgba(255, 255, 255, 0.25);
+border-radius: 31px;
+
+align-items:center;
+justify-content:center;
+
+display:flex;
+flex-direction: row;
+
+align-items: center;
+}
+&__wrapper{
+ text-align:center;
+ max-width:325px;
+ margin-bottom:80px;
+}
+&__img{
+    margin-top: 80px;
+margin-bottom:24px;
+}
+&__title{
+    margin-bottom:12px;
+}
+&__sub-title{
+    margin-bottom:40px;
+}
+&__btn{
+
+}
+
+}
