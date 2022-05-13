@@ -1,5 +1,6 @@
-import React from 'react'
-import axios from 'axios';
+import React, {useState, useEffect} from 'react'
+ import axios from 'axios';
+ import {DataBaseLink} from '../../Host.js'
 
 import DB from '../../Assets/db.json'
 
@@ -8,7 +9,13 @@ import RocketCancel from '../../Assets/images/RocketCancel.svg';
 import './QueueResultPanel.scss';
 
 const QueueResultPanel = () => {
-const status=DB.users.filter(el=>el.id==localStorage.getItem('userID'))[0].status
+    const [status, setStatus] = useState(DB.users[0].status);
+    useEffect(() => {
+            axios.get(`${DataBaseLink}users`).then(({data}) =>{
+                setStatus(data.filter(el=>el.id==localStorage.getItem('userID'))[0].status)
+             })
+      },[]);
+//const status=DB.users.filter(el=>el.id==localStorage.getItem('userID'))[0].status
 let isSuccess=false
 if (status==="success") {
     isSuccess=true
