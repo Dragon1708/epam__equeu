@@ -1,9 +1,7 @@
 import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-// import  Amplify from '@aws-amplify/core';
-// import  config from './aws-exports';
-// import  {DataStore} from '';
+import {DataBaseLink} from '../../Host.js'
 
 
 
@@ -71,7 +69,7 @@ if (phone!=0) {
 
 //    })
     console.log(userName)
-    axios.post('http://localhost:3001/users',{
+    axios.post(`${DataBaseLink}users`,{
         Name: userName,
         phone: phone,
         planetID:  PlanetID,

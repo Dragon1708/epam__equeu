@@ -41,10 +41,10 @@ SetIsRegistered(false)
         const phone=checkPhoneNumber(AdminPhone)
 
         if (phone!=0) {
-            axios.get('http://localhost:3001/administrators').then(({data}) =>{
+            axios.get(`${DataBaseLink}administrators`).then(({data}) =>{
         if (isRegister) {
             if (!CheckRegister(data)) {
-                axios.post('http://localhost:3001/administrators',{
+                axios.post(`${DataBaseLink}administrators`,{
                 name: AdminName,
                 phone:phone
             } ).then(({data})=>{

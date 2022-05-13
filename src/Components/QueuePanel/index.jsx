@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import {DataBaseLink} from '../../Host.js'
 
 import DB from '../../Assets/db.json'
 
@@ -11,7 +12,7 @@ const QueuePanel = () => {
     const isLogin=localStorage.getItem('userID') ? true : false;
     let userData={}
     function updatePosition(){
-        axios.get('http://localhost:3001/users').then(({data}) =>{
+        axios.get(`${DataBaseLink}users`).then(({data}) =>{
           
            const waitingUser=data.filter(el => el.status==="waiting");
      

@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios';
+import {DataBaseLink} from '../../Host.js'
+
 
 import DB from '../../Assets/db.json'
 
@@ -22,8 +24,8 @@ if (isActive) {
     //     updateTickets()
     // })
     // })
-    axios.delete(`http://localhost:3001/users/`+id).then(()=>{
-        axios.post('http://localhost:3001/users',{
+    axios.delete(`${DataBaseLink}users/`+id).then(()=>{
+        axios.post(`${DataBaseLink}users`,{
                 id:id,
                 Name: Name,
                 phone: phone,
@@ -42,8 +44,8 @@ if (isActive) {
 
 const canceled=()=>{
     if (isActive) {
-        axios.delete(`http://localhost:3001/users/`+id).then(()=>{
-            axios.post('http://localhost:3001/users',{
+        axios.delete(`${DataBaseLink}users/`+id).then(()=>{
+            axios.post(`${DataBaseLink}users`,{
                     id:id,
                     Name: Name,
                     phone: phone,

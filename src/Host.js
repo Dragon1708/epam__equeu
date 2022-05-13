@@ -1,0 +1,1 @@
+export const DataBaseLink='https://epam-eue.herokuapp.com/';

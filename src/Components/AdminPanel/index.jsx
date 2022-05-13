@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
+import {DataBaseLink} from '../../Host.js'
 
 import CardTicket from '../CardTicket'
 
@@ -15,7 +16,7 @@ const AdminPanel = () => {
   })
 
 const updateUserTickets=()=>{
-  axios.get('http://localhost:3001/users').then(({data}) =>{
+  axios.get(`${DataBaseLink}users`).then(({data}) =>{
    // const waitingUser= data.map((user) => user.status).filter(el => el==="waiting");
    const waitingUser= data.filter(el => el.status==="waiting");
 let arr=[]
