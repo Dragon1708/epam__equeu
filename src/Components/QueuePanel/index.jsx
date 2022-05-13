@@ -19,7 +19,7 @@ const QueuePanel = () => {
       
            const waitingUser=data.filter(el => el.status==="waiting");
      
-     if (waitingUser.length!==1) {
+     if (waitingUser.length!==0) {
         console.log(userData, "==ID")
         for (let i = 0; i < waitingUser.length; i++) {
             if (waitingUser[i].id===userData.id) {
