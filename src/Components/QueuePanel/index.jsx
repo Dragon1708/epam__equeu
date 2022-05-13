@@ -8,54 +8,52 @@ import DB from '../../Assets/db.json'
 import './QueuePanel.scss';
 
 const QueuePanel = () => {
-    let navigate = useNavigate();
+   let navigate = useNavigate();
+   
+    const isLogin=localStorage.getItem('userID') ? true : false;
+
+    function updatePosition(){
+        
+        axios.get(`${DataBaseLink}users`).then(({data}) =>{
     
-     const isLogin=localStorage.getItem('userID') ? true : false;
- 
-     function updatePosition(){
-         
-         axios.get(`${DataBaseLink}users`).then(({data}) =>{
-     
-       
-            const waitingUser=data.filter(el => el.status==="waiting");
       
-      if (waitingUser.length!==1) {
-         console.log(userData, "==ID")
-         for (let i = 0; i < waitingUser.length; i++) {
-             if (waitingUser[i].id===userData.id) {
-                 console.log( waitingUser.slice(0,i).length/waitingUser.length)
-                 setProgressVal(100-((waitingUser.slice(0,i).length/waitingUser.length)*100))
-            //    console.log(waitingUser.length)
-                 setQueuePosition(i+1)
+           const waitingUser=data.filter(el => el.status==="waiting");
+     
+     if (waitingUser.length!==1) {
+        console.log(userData, "==ID")
+        for (let i = 0; i < waitingUser.length; i++) {
+            if (waitingUser[i].id===userData.id) {
+                console.log( waitingUser.slice(0,i).length/waitingUser.length)
+                setProgressVal(100-((waitingUser.slice(0,i).length/waitingUser.length)*100))
+               console.log(waitingUser, "==i==", i)
+                setQueuePosition(i+1)
+        }
+     }
+    } else {
+        navigate(`/QueueResultPanel`);  
+    }
+    })
+  
+    }
+    const [userData, setUserData] = useState(DB.users[0]);
+    const [queuePosition, setQueuePosition] = useState(0);
+    const [ProgressVal, setProgressVal] = useState(100);
+
+    useEffect(() => {
+        if (isLogin) {
+      
+            axios.get(`${DataBaseLink}users`).then(({data}) =>{
+              //  const aa=data.filter(el=>  el.id==localStorage.getItem('userID'))[0]
+                setUserData(data.filter(el=>  el.id==localStorage.getItem('userID'))[0])
+               // console.log(DB.Planets[userData.planetID].PlanetImage)
+             })
          }
-      }
-     } else {
-         navigate(`/QueueResultPanel`);  
-     }
-     })
-   
-     }
-     const [userData, setUserData] = useState(DB.users[0]);
-     const [queuePosition, setQueuePosition] = useState(0);
-     const [ProgressVal, setProgressVal] = useState(100);
- 
-     useEffect(() => {
-         if (isLogin) {
-       
-             axios.get(`${DataBaseLink}users`).then(({data}) =>{
-               //  const aa=data.filter(el=>  el.id==localStorage.getItem('userID'))[0]
-                 setUserData(data.filter(el=>  el.id==localStorage.getItem('userID'))[0])
-                // console.log(DB.Planets[userData.planetID].PlanetImage)
-              })
-              updatePosition()
-          }
-       },[]);
-   
- //  setInterval(()=> {
- //       console.log(queuePosition)
- //       updatePosition()
- //     }, 5000)
- 
+      },[]);
+      updatePosition()
+//  setInterval(()=> {
+//       console.log(queuePosition)
+//       updatePosition()
+//     }, 5000)
  
      return (
          
