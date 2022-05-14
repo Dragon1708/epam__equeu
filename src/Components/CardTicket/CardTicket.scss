@@ -55,9 +55,10 @@ width:152px;
         margin: 90px 36px  26px   0px ;
        
 &-success{
-
+padding: 0;
 }
 &-cancel{
+    padding: 0;
     margin-left: 16px;
     background: $red-color;
 }
