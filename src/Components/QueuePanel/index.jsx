@@ -15,24 +15,25 @@ const QueuePanel = () => {
     function updatePosition(){
         
         axios.get(`${DataBaseLink}users`).then(({data}) =>{
+   
+    const NUms=localStorage.getItem('userID')
+    const DBuser=data.filter(el => el.id==NUms)
     
-      
-           const waitingUser=data.filter(el => el.status==="waiting");
-     
-     if (waitingUser.length!==0) {
-        console.log(userData, "==ID")
+    if (DBuser[0].status!=="waiting") {
+  
+       navigate(`/QueueResultPanel`);  
+    } else{
+        const waitingUser=data.filter(el => el.status==="waiting");
         for (let i = 0; i < waitingUser.length; i++) {
-            if (waitingUser[i].id===userData.id) {
-                console.log( waitingUser.slice(0,i).length/waitingUser.length)
-                setProgressVal(100-((waitingUser.slice(0,i).length/waitingUser.length)*100))
-               console.log(waitingUser, "==i==", i)
-                setQueuePosition(i+1)
-        }
-     }
-    } else {
-        navigate(`/QueueResultPanel`);  
+                    if (waitingUser[i].id===userData.id) {
+                        console.log( waitingUser.slice(0,i).length/waitingUser.length)
+                        setProgressVal(100-((waitingUser.slice(0,i).length/waitingUser.length)*100))
+                   //    console.log(waitingUser, "==i==", i)
+                        setQueuePosition(i+1)
+                }
     }
-    })
+}
+        })
   
     }
     const [userData, setUserData] = useState(DB.users[0]);
@@ -47,14 +48,15 @@ const QueuePanel = () => {
                 setUserData(data.filter(el=>  el.id==localStorage.getItem('userID'))[0])
                // console.log(DB.Planets[userData.planetID].PlanetImage)
              })
+             updatePosition()
          }
       },[]);
-      updatePosition()
 //  setInterval(()=> {
 //       console.log(queuePosition)
 //       updatePosition()
 //     }, 5000)
- 
+
+
      return (
          
          <section className="QueuePanel">
