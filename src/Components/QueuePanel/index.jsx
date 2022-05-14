@@ -25,7 +25,7 @@ const QueuePanel = () => {
     } else{
         const waitingUser=data.filter(el => el.status==="waiting");
         for (let i = 0; i < waitingUser.length; i++) {
-                    if (waitingUser[i].id===NUms) {
+                    if (waitingUser[i].id==NUms) {
                         console.log( waitingUser.slice(0,i).length/waitingUser.length)
                         setProgressVal(100-((waitingUser.slice(0,i).length/waitingUser.length)*100))
                    //    console.log(waitingUser, "==i==", i)
