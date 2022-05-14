@@ -64,9 +64,7 @@ SetIsRegistered(false)
 
             }
         }
-           
-            //  console.log("Registered? =", CheckRegister(data))
-
+          
                 })
             SetInputPhoneClass("RegisterAdmin__input input-form")
         }

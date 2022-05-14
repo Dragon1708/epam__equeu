@@ -14,16 +14,7 @@ const CardTicket = ({userInfo,updateTickets, index})=>{
 //console.log(id)
 const accepted=()=>{
 if (isActive) {
-    // axios.post('http://localhost:3001/users',{
-    //     Name: Name,
-    //     phone: phone,
-    //     planetID: planetID,
-    //     status: "success"
-    // } ).then(()=>{
-    //     axios.delete(`http://localhost:3001/users/`+id).then(()=>{
-    //     updateTickets()
-    // })
-    // })
+  
     axios.delete(`${DataBaseLink}users/`+id).then(()=>{
         axios.post(`${DataBaseLink}users`,{
                 id:id,
@@ -72,13 +63,13 @@ const canceled=()=>{
                 </div>
             </div>
             <div className="CardTicket__content">
-                <label className="CardTicket__name-label secondary-text ">Name</label>
+                <label className="CardTicket__name-label secondary-text ">Ім'я</label>
                 <h2 className="CardTicket__name Title-font">{Name}</h2>
-                <label className="CardTicket__phone-label secondary-text ">Tel</label>
+                <label className="CardTicket__phone-label secondary-text ">Телефон</label>
                 <h2 className="CardTicket__phone Title-font">{phone}</h2>
               {isActive ?  <div className="CardTicket__toggle">
-                    <button onClick={accepted} className="CardTicket__toggle-success green-btn">Принять заявку</button>
-                    <button  onClick={canceled}  className="CardTicket__toggle-cancel green-btn">Отменить заявку</button>
+                    <button onClick={accepted} className="CardTicket__toggle-success green-btn">Прийняти заявку</button>
+                    <button  onClick={canceled}  className="CardTicket__toggle-cancel green-btn">Скасувати заявку</button>
                 </div> : <div></div> }
             </div>
         </div>

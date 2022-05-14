@@ -6,15 +6,9 @@ import {DataBaseLink} from '../../Host.js'
 
 
 import './RegisterForm.scss';
-//import awsExports from './aws-exports';
 
 
-//Amplify.configure(awsExports);
-const AWS_API="api755dfac9"
-const path='/users'
-
-
-const RegisterForm = ({setNumPlanet, onAddUser }) => {
+const RegisterForm = ({setNumPlanet }) => {
     const [InputPhoneClass, SetInputPhoneClass]=useState("RegisterForm__input input-form")
     const [PlanetID, setPlanetID] =setNumPlanet
     const [userName, setUserName] = useState("");

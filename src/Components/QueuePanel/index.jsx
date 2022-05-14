@@ -64,7 +64,7 @@ const QueuePanel = () => {
                 <h1 className="QueuePanel__title Title-font">Дякуємо за реєстрацію!</h1>
                  <div className="QueuePanel__container">
                      <label for="file" className="QueuePanel__queue-info Title-font">
-                         Ваша позиция в очереди:<span>{queuePosition}</span>
+                     Ваша позиція у черзі:<span>{queuePosition}</span>
                      </label>
                      <progress id="file" max="100" value={ProgressVal}> 70% </progress>
                      <div className="QueuePanel__data-wrapper">
@@ -73,14 +73,14 @@ const QueuePanel = () => {
                              <img className="data-wrapper__img" src={DB.Planets[userData.planetID].PlanetImage} />
                              <div className="data-wrapper__planet-info">
                                  <label className="data-wrapper__label label-text">
-                                     Planet
+                                     Планета
                                  </label>
                                  <h3 className="data-wrapper__planet-name Title-font">{DB.Planets[userData.planetID].name}</h3>
                              </div>
                          </div>
      
                          <div className="data-wrapper__user-info">
-                             <h2 className="data-wrapper__user-title Title-font">Vashi Dani:</h2>
+                             <h2 className="data-wrapper__user-title Title-font">Ваші данні:</h2>
                              <label className="data-wrapper__label label-text" for="name">Імʼя</label>
                              <h3 className="data-wrapper__name Title-font">{userData.Name}</h3>
                              <label className="data-wrapper__label label-text" for="phone" required>Телефон</label>
@@ -89,7 +89,7 @@ const QueuePanel = () => {
                          </div>
                      </div>
                  </div>
-             </div> : <h1 className="QueuePanel__title Title-font">No Inform...</h1>}
+             </div> : <h1 className="QueuePanel__title Title-font">Немає інформації...</h1>}
          </section>
      
      )

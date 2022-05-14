@@ -67,7 +67,7 @@ useEffect(()=>{
           <table className="AdminPanel__statistic-table">
             <tbody>
               <tr>
-                <td className="Title-font">Заявок в очереди:</td>
+                <td className="Title-font">Заявок у черзі:</td>
                 <td>
                   <span className="statistic__waiting Title-font">{UserStatistic.waiting}</span>
                 </td>
